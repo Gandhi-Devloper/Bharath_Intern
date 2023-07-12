@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Temperature Converter</title>
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body><br><br><br><br><br><br>
-    <marquee behavior="slide" bgcolor="grey" width="100%" direction="right" height="50px">
-        <h6>Converting of temperature from celsius to fahrenheit</h6>
-        </marquee>
-    
-    
-    <div class="wrapper">
-        
-        <div class="container">
-            <label for="celsius">Celsius</label>
-            <input type="number" id="celsius" oninput= "celToFar()">
-        </div>
-        <div class="container">
-            <label for="fahrenheit">Fahrenheit</label>
-            <input type="number" id="fahrenheit" oninput = "farToCel()">
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--LINK CSS FILE-->    
+    <link rel="stylesheet" href="style.css" />
+    <title>Temperature Converter App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="temperature-converter">
+          <h1 class="title">Temperature Converter</h1>
+          <div class="result">
+            <span class="result-heading">Result (Celsius)</span>
+            <h2 class="celsius-value" id="celsius"></h2>
+          </div>
+          <div class="degree-type">
+            <div class="degree-field">
+              <label for="degree">Degrees</label>
+              <input type="number" name="degree" id="degree" />
+            </div>
+            <div class="temp-field">
+              <label for="temp-type">Type</label>
+              <select name="temperatures" id="temp-type" autocomplete="on">
+                <option id="fahrenheit" value="fahrenheit">Fahrenheit</option>
+                <option id="kelvin" value="kelvin">Kelvin</option>
+              </select>
+            </div>
+          </div>
+          <button id="convert-btn">Convert</button>
+      </div>
     </div>
-    <script src="js/script.js"></script>
-</body>
+    <!--LINK JAVASCRIPT FILE-->
+    <script src="./script.js"></script>
+  </body>
 </html>
